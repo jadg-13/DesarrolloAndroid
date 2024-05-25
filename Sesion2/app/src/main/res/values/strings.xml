@@ -1,0 +1,8 @@
+<resources>
+    <string name = "app_name">Registro</string>
+    <string name = "message1">UNI VALLE</string>
+    <string name = "message2">Nombre</string>
+    <string name = "message3">Apellidos</string>
+    <string name = "message4">Edad</string>
+    <string name="btnShow">Mostrar</string>
+</resources>
