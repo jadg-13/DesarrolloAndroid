@@ -43,14 +43,57 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginHorizontal="25dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TvMessage3"
+        app:layout_constraintTop_toBottomOf="@+id/EtName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/message3"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:layout_marginHorizontal="25dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/EtLastName"
+        app:layout_constraintTop_toBottomOf="@+id/TvMessage3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="25dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TvMessage4"
+        android:text="@string/message4"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/EtLastName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="25dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/EtAge"
+        app:layout_constraintTop_toBottomOf="@id/TvMessage4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="25dp"
+        />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/BtnShow"
-        app:layout_constraintTop_toBottomOf="@id/EtName"
+        app:layout_constraintTop_toBottomOf="@id/EtAge"
         android:text="@string/btnShow"
         android:layout_margin="25dp"/>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
