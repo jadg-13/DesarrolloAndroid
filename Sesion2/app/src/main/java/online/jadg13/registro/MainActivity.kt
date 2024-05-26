@@ -20,7 +20,9 @@ class MainActivity : AppCompatActivity() {
     private fun start() {
         binding.BtnShow.setOnClickListener {
             var name = binding.EtName.text.toString()
-            Toast.makeText(this, "Hola $name, bienvenido a la UNIVALLE",
+            var lastName = binding.EtLastName.text.toString()
+            var age = binding.EtAge.text.toString().toInt()
+            Toast.makeText(this, "Datos Ingresados $name $lastName, Edad: $age",
                 Toast.LENGTH_LONG).show()
         }
     }
