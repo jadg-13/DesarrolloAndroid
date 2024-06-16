@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/menu">
+
+    <fragment
+        android:id="@+id/menu"
+        android:name="online.jadg13.ejemplomenu.Menu"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/go_suma"
+            app:destination="@id/suma" />
+    </fragment>
+    <fragment
+        android:id="@+id/suma"
+        android:name="online.jadg13.ejemplomenu.Suma"
+        android:label="fragment_suma"
+        tools:layout="@layout/fragment_suma" />
+</navigation>
