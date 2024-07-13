@@ -1,5 +1,6 @@
 package online.jadg13.clase7.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
@@ -14,7 +15,7 @@ abstract class CityDao {
     abstract suspend fun insert(city: City)
 
     @Query("select * from cities")
-    abstract suspend fun getAllCities():List<City>
+    abstract fun getAllCities():LiveData<List<City>>
 
     @Update
     abstract suspend fun update(city: City)
