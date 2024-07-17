@@ -23,4 +23,7 @@ abstract class CityDao {
     @Delete
     abstract suspend fun delete(city: City)
 
+    @Query("Select * from cities where id = :id")
+    abstract fun getCity(id:Int):LiveData<City>
+
 }

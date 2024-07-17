@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NewCityragment">
+    tools:context=".EditCityFragment">
 
     <LinearLayout
         android:id="@+id/llNewCity"
@@ -17,10 +17,19 @@
             android:id="@+id/tvNewCity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nuevo Registro"
+            android:text="Editar Registro"
             android:textAlignment="center"
             android:textSize="30sp"
             android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvIdCity"
+            android:text="0"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tfName"
