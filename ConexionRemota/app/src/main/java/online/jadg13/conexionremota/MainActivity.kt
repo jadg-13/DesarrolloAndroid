@@ -13,24 +13,26 @@ import online.jadg13.conexionremota.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    val service = RetrofitServiceFactory.makeRetrofitService()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-
-        val service = RetrofitServiceFactory.makeRetrofitService()
-
-        lifecycleScope.launch {
-            val listado = service.listarEstado()
-
-
-            val strMsn = listado.joinToString(separator = "\n") { it.toString() }
-            binding.TvMsn.text = strMsn
-            Log.e("MisRegistros", listado.toString())
-        }
-
-
+        showData()
         setContentView(binding.root)
-
     }
+
+    fun showData() {
+        lifecycleScope.launch {
+            try {
+                val listado = service.listarEstado()
+                val strMsn = listado.joinToString(separator = "\n") { "Name: ${it.name} - Description: ${it.description}" }
+                binding.TvMsn.text = strMsn
+                Log.e("MisRegistros", listado.toString())
+            } catch (e: Exception) {
+                Log.e("Error", "Error al obtener los registros", e)
+            }
+        }
+    }
+
 }
