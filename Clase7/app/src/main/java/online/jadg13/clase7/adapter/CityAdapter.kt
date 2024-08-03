@@ -8,11 +8,13 @@ import android.widget.BaseAdapter
 import android.widget.ImageButton
 import android.widget.TextView
 import online.jadg13.clase7.R
-import java.text.DecimalFormat
 import online.jadg13.clase7.entities.City
+import java.text.DecimalFormat
+
+
 class CityAdapter(private val context: Context, private var cityList: List<City>,
-    private val onEditClick: (City)-> Unit,
-    private val onDeleteClick: (City) ->Unit): BaseAdapter() {
+                  private val onEditClick: (City)-> Unit,
+                  private val onDeleteClick: (City) ->Unit): BaseAdapter() {
     override fun getCount(): Int {
         return cityList.size
     }

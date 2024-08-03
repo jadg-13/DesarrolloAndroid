@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listCitiesFragment">
+
+    <fragment
+        android:id="@+id/listCitiesFragment"
+        android:name="online.jadg13.crmapi.ListCitiesFragment"
+        android:label="fragment_list_cities"
+        tools:layout="@layout/fragment_list_cities" >
+        <action
+            android:id="@+id/action_listCitiesFragment_to_cityFragment"
+            app:destination="@id/cityFragment" />
+        <action
+            android:id="@+id/action_listCitiesFragment_to_cityEditFragment"
+            app:destination="@id/cityEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cityFragment"
+        android:name="online.jadg13.crmapi.CityFragment"
+        android:label="fragment_city"
+        tools:layout="@layout/fragment_city" />
+    <fragment
+        android:id="@+id/cityEditFragment"
+        android:name="online.jadg13.crmapi.CityEditFragment"
+        android:label="fragment_city_edit"
+        tools:layout="@layout/fragment_city_edit">
+        <argument
+            android:name="city_id"
+            app:argType="integer"/>
+
+    </fragment>
+</navigation>
